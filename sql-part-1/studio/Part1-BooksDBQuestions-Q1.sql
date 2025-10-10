@@ -2,7 +2,7 @@
 --Books DB 
 --Question 1
 
--- return top 100 results
+-- Question 1: Write a query of the books table that reutrn the top 100 results and includes book_id, authors, title, and average_rating. .
 SELECT TOP 100
     book_id
     ,authors

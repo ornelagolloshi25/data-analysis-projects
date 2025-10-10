@@ -2,7 +2,7 @@
 --Books DB 
 --Question 3
 
--- return most popular tag
+-- Which tag  is the most popular?
 SELECT TOP 1 tag_id, COUNT(tag_id) 
 FROM BooksDB.dbo.book_tags
 GROUP BY tag_id

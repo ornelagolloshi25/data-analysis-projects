@@ -42,3 +42,13 @@ WHERE LEFT(authors, CHARINDEX(',', authors + ',') - 1) in
     )
 ORDER BY    Author asc, 
             rating desc;
+
+-- return all books from the top 3 authors, sort by author and rating
+SELECT
+    book_id,
+    authors,
+    title,
+    average_rating as rating
+FROM BooksDB.dbo.books
+WHERE authors IN ('Bill Watterson', 'Brandon Sanderson', 'J.K. Rowling')
+ORDER BY authors ASC, rating DESC;

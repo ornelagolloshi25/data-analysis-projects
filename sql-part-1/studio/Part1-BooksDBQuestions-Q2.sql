@@ -2,7 +2,7 @@
 --Books DB 
 --Question 2
 
--- return least popular book
+-- Q2: Write a query to find the least popular book.
 SELECT TOP 1
     book_id
     ,authors
