@@ -21,3 +21,15 @@ WHERE
     LEFT(language_code, 2) NOT IN ('en' ) AND
     LEFT(language_code, 3) NOT IN ('eng' ) AND
     LEFT(language_code, 5) NOT IN ('en-US', 'en-UK' );
+
+
+
+
+--
+
+SELECT COUNT(language_code)
+FROM BooksDB.dbo.books
+WHERE 
+    LEFT(language_code, 2) NOT IN ('en' ) AND
+    LEFT(language_code, 3) NOT IN ('eng' ) AND
+    LEFT(language_code, 5) NOT IN ('en-US', 'en-UK' );

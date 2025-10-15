@@ -17,3 +17,5 @@ WHERE LEN(title) = (
     SELECT MAX(LEN(title))
     FROM BooksDB.dbo.books
 );
+
+

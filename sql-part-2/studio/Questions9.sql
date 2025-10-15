@@ -6,7 +6,7 @@
 */
 
 SELECT 
-    title + ' by ' + authors + ' in ' + ISNULL(language_code, 'unknown') + ' language' AS BookSummary
+    CONCAT(title, ' by ', authors, ' in ' + ISNULL(language_code, 'unknown'), ' language') AS BookSummary
 FROM BooksDB.dbo.books
 WHERE 
     title IS NULL OR

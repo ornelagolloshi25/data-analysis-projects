@@ -26,3 +26,11 @@ WHERE
     authors IS NULL OR
     language_code IS NULL;
 
+--
+SELECT 
+    CONCAT(title,' by ', authors , ' in', language_code,' language') AS BookSummary
+FROM BooksDB.dbo.books
+WHERE 
+    title IS NULL OR
+    authors IS NULL OR
+    language_code IS NULL;

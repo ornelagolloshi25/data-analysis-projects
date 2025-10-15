@@ -19,3 +19,16 @@ WHERE title LIKE '%The%'
 SELECT COUNT(title)
 FROM BooksDB.dbo.books
 WHERE title LIKE '%the%'
+
+
+--4702
+SELECT COUNT(*) AS title
+FROM BooksDB.dbo.books
+WHERE CHARINDEX('the', title) > 0;
+
+--4702
+SELECT COUNT(*) AS title
+FROM BooksDB.dbo.books
+WHERE CHARINDEX('the', title) > 0;
+
+
