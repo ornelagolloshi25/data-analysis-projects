@@ -38,12 +38,12 @@ Where average_rating >= 4.2
 EXCEPT
 
 SELECT original_title, title
-FROM Books
+FROM BooksDB.dbo.books
 WHERE original_title IS NULL;
 
 --return books with an average rating of 4.2 or higher, books that share both title and original title
 -- and sort results by average_ratiing in descending order
-SELECT original_title, title
+SELECT original_title, title, average_rating
 FROM (
     SELECT original_title, title, average_rating
     FROM BooksDB.dbo.books
@@ -52,8 +52,8 @@ FROM (
     EXCEPT
 
     SELECT original_title, title, average_rating
-    FROM Books
+    FROM BooksDB.dbo.books
     WHERE original_title IS NULL
 ) AS BooksFour
-ORDER BY average_rating DESC
+ORDER BY average_rating DESC;
 

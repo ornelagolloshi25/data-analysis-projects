@@ -27,10 +27,9 @@ FROM BooksDB.dbo.book_tags AS bt
 WHERE bt.tag_id = (
     SELECT t.tag_id
     FROM BooksDB.dbo.tags As t
-    WHERE t.tag_name = 'Meditation'
-)
+    WHERE t.tag_name = 'Meditation')
 
--- retrun booke titles when is attached with a tag name "Meditation"
+-- return booke titles when is attached with a tag name "Meditation"
 SELECT b.title
 FROM BooksDB.dbo.books AS b
 WHERE b.book_id IN (
@@ -39,6 +38,22 @@ WHERE b.book_id IN (
         WHERE bt.tag_id = (
             SELECT t.tag_id
             FROM BooksDB.dbo.tags As t
-            WHERE t.tag_name = 'Meditation'
-        )
-);
+            WHERE t.tag_name = 'Meditation'));
+
+
+----- Query by britanny
+SELECT DISTINCT
+  b.title,
+  'meditation' AS tag_name
+    FROM booksdb.dbo.books AS b
+    WHERE b.book_id IN (
+SELECT bt.goodreads_book_id
+    FROM Booksdb.dbo.book_tags AS bt
+    WHERE bt.tag_id IN (
+SELECT t.tag_id
+    FROM BooksDB.dbo.tags AS t
+    WHERE t.tag_name = 'meditation'
+  )
+)
+ORDER BY b.title;
+

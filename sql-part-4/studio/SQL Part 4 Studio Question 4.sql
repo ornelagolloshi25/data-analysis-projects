@@ -27,7 +27,7 @@ GROUP BY r.book_id;
 
 
 --Part A:
---return book compares the publication time with average reader ratings.
+--return books compares the publication time with average reader ratings.
 SELECT b.title, b.original_publication_year
 FROM BooksDB.dbo.books as b
 WHERE b.average_rating < (
@@ -38,7 +38,7 @@ WHERE b.average_rating < (
 
 --Part B:
 --return book compares the publication time with average reader ratings.
---and rdered by year, then the book title
+--and ordered by year, then the book title
 SELECT b.title, b.original_publication_year
 FROM BooksDB.dbo.books as b
 WHERE b.average_rating < (
