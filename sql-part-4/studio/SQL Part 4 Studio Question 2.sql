@@ -41,19 +41,17 @@ WHERE b.book_id IN (
             WHERE t.tag_name = 'Meditation'));
 
 
------ Query by britanny
-SELECT DISTINCT
-  b.title,
-  'meditation' AS tag_name
-    FROM booksdb.dbo.books AS b
-    WHERE b.book_id IN (
-SELECT bt.goodreads_book_id
-    FROM Booksdb.dbo.book_tags AS bt
-    WHERE bt.tag_id IN (
-SELECT t.tag_id
-    FROM BooksDB.dbo.tags AS t
-    WHERE t.tag_name = 'meditation'
-  )
-)
-ORDER BY b.title;
+
+SELECT title
+FROM BooksDB.dbo.books
+WHERE book_id IN (
+    SELECT book_id
+    FROM BooksDB.dbo.book_tags
+    WHERE tag_id IN (
+        SELECT tag_id
+        FROM BooksDB.dbo.tags
+        WHERE tag_name = 'Meditation'
+    )
+);
+
 
