@@ -40,3 +40,16 @@ CREATE TABLE planned_projects.planned_makes (
     start_date DATE,
     is_completed BIT
 );
+
+--
+
+
+CREATE TABLE Sep2025JunkDB.ornela_golloshi.planned_makes (
+    make_id INT PRIMARY KEY IDENTITY(1,1),
+    name NVARCHAR(100),
+    category NVARCHAR(50),
+    estimated_hours INT,
+    materials_needed NVARCHAR(MAX),
+    start_date DATE,
+    is_completed BIT
+);
