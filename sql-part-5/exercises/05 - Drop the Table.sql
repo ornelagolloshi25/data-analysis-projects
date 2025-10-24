@@ -7,11 +7,8 @@ While this has been fun, it is time to drop the table!
 */
 
 --Drop table
-USE ProjectPlans;
-GO
-
-DROP TABLE planned_projects.planned_makes;
+DROP TABLE Sep2025JunkDB.ornela_golloshi.planned_makes;
 
 --Test it
 SELECT *
-FROM ProjectPlans.planned_projects.planned_makes
+FROM Sep2025JunkDB.ornela_golloshi.planned_makes

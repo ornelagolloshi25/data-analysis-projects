@@ -4,10 +4,8 @@ Add three rows to your table that are your planned makes.
 
 */
 
-USE ProjectPlans;
-GO
 
-INSERT INTO planned_projects.planned_makes (
+INSERT INTO Sep2025JunkDB.ornela_golloshi.planned_makes (
     name,
     category,
     estimated_hours,
@@ -25,4 +23,4 @@ VALUES
 
 --Test it
 SELECT *
-FROM ProjectPlans.planned_projects.planned_makes
+FROM  Sep2025JunkDB.ornela_golloshi.planned_makes
