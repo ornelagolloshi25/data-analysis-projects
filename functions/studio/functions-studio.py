@@ -7,7 +7,7 @@
 def reverse_characters(s):
     return ''.join(list(s)[::-1])
 # e) Create a variable of type string to test your new function. 
-my_string = "Python"
+my_string = "Apple"
 # f) Use 'print(reverse_characters(my_variable_name))'; to call the function and verify that it correctly reverses the characters in the string.
 print(reverse_characters(my_string))
 # g) Use method chaining to reduce the lines of code within the function.
@@ -20,16 +20,16 @@ print(reverse_characters(my_string))
 # e) Be sure to print the result returned by the function to verify that your code works for both strings and numbers. Do this before moving on to the next steps.
 
 def reverse_characters(x):
-    if isinstance(x, str):  # a) check if parameter is string
+    if type(x) == str:  # a) check if parameter is string
         return ''.join(list(x)[::-1])  # b) reverse string as before
-    elif isinstance(x, int):  # c) check if parameter is number
+    elif type(x) == int:  # c) check if parameter is number
         return int(''.join(list(str(x))[::-1]))  # d) convert to string, reverse, back to int
     else:
         raise TypeError("Only strings and integers are supported")
 
 # Test with a string
-my_string = "Python"
-print(reverse_characters(my_string))   # Output: nohtyP
+my_string = "Apple"
+print(reverse_characters(my_string)) 
 
 # Test with a number
 my_number = 1234
@@ -56,7 +56,7 @@ def reverse_list(old_list):
         new_list.append(reversed_element)
     
     # e) Return the final reversed list
-    return new_list
+    return new_list[::-1]
 
 list_test1 = ['apple', 'potato', 'Capitalized Words']
 list_test2 = [123, 8897, 42, 1168, 8675309]

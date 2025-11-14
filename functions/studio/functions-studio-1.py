@@ -11,6 +11,6 @@
 def reverse_characters(s):
     return ''.join(list(s)[::-1])
 
-my_string = "Python"
+my_string = "Apple"
 
 print(reverse_characters(my_string))
